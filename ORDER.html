@@ -45,7 +45,7 @@
                     <div>
                         <label class="order-data" for="email">Email: </label>
                         <br>
-                        <input class="order-box" type="email" name="email" id="email">
+                        <input class="order-box" type="text" name="email" id="email">
                     </div>
 
                     <div>
@@ -87,7 +87,7 @@
                     <br>
 
                     <div>
-                        <button class="button-order" type="submit">SUBMIT</button>
+                        <button class="button-order" type="submit" onclick="return Validate()">SUBMIT</button>
                     </div>
                 </form>
             </div>
@@ -120,6 +120,76 @@
         </div>
     </footer>
 
+
+    <script>
+        function cekalphabet(){
+            var fullname = document.getElementById("fname").value;
+            for (let characters of fullname){
+                if (characters >= 'a' && characters <= 'z' || characters >= 'A' && characters <= 'Z'){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function ceknumeric(){
+            var fullname = document.getElementById("fname").value;
+            for (let characters of fullname){
+                if (characters >= '0' && characters <= '9'){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        function Validate(){
+            var check_alpha = 0;
+            var check_numer = 0;
+            var fullname = document.getElementById("fname").value;
+            var email = document.getElementById("email").value
+            var quantity = document.getElementById("burgerquantity").value
+            var address = document.getElementById("address").value
+            var agree = document.getElementById("termsandconditions")
+
+            if (fullname == ""){
+                alert("Name must be filled out");
+                return false;
+            }
+            
+            else if(fullname.length < 5 || fullname.length > 15){
+                alert("Name must be between 5 to 15 characters");
+                return false;
+            }
+
+            else if(!ceknumeric() || !cekalphabet()){
+                alert("Name must be alphanumeric");
+                return false;
+            }
+
+            else if(!email.includes("@")){
+                alert("Please input a right email");
+                return false;
+            }
+
+            else if(quantity <= 0){
+                alert("Burger's Quantity must be at least 1");
+                return false;
+            }
+
+            else if(address.length > 20 || address == ""){
+                alert("Address must be filled and length must be under 20");
+                return false;
+            }
+
+            else if(!agree.checked){
+                alert("You have to agree to terms and conditions");
+                return false;
+            }
+
+        }
+
+    </script>
 
 </body>
 
