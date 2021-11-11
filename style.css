@@ -328,6 +328,13 @@ select {
     text-shadow: 0 0 1px white;
 }
 
+.error{
+    text-align: center;
+    color: red;
+    margin: 0;
+    padding-top: 10px;
+}
+
 /* order page
 .order-form {
     width: 500px;

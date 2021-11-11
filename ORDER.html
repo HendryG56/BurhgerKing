@@ -26,7 +26,7 @@
         </header>
 
         <div id="menu-order">
-            <form action="#" class="form">
+            <form action="#">
                 <h2 class="menu-title order-title">Order Menu</h2>
                 <input
                     type="text"
@@ -58,7 +58,8 @@
                 </select>
                 <input
                     type="number"
-                    name="quantity"
+                    name="burgerquantity"
+                    id="burgerquantity"
                     value="1"
                     min="1"
                     class="textbox"
@@ -67,15 +68,21 @@
                 <input
                     type="text"
                     name="address"
+                    id="address"
                     class="textbox"
                     placeholder="Address"
                 />
                 <div class="checkbox">
-                    <input type="checkbox" name="agree" id="agree" />
+                    <input
+                        type="checkbox"
+                        name="termsandconditions"
+                        id="termsandconditions"
+                    />
                     <label for="agree"
                         >Agreement with term and conditions</label
                     >
                 </div>
+                <p id="error" class="error"></p>
                 <button class="order" type="submit" onclick="return Validate()">
                     Order
                 </button>
@@ -209,25 +216,40 @@
                 var agree = document.getElementById("termsandconditions");
 
                 if (fullname == "") {
-                    alert("Name must be filled out");
+                    // alert("Name must be filled out");
+                    // $('.error').text("Name must be filled out")
+                    document.getElementById("error").innerHTML =
+                        "Name must be filled out";
                     return false;
                 } else if (fullname.length < 5 || fullname.length > 15) {
-                    alert("Name must be between 5 to 15 characters");
+                    // alert("Name must be between 5 to 15 characters");
+                    document.getElementById("error").innerHTML =
+                        "Name must be between 5 to 15 characters";
                     return false;
                 } else if (!ceknumeric() || !cekalphabet()) {
-                    alert("Name must be alphanumeric");
+                    // alert("Name must be alphanumeric");
+                    document.getElementById("error").innerHTML =
+                        "Name must be alphanumeric";
                     return false;
                 } else if (!email.includes("@")) {
-                    alert("Please input a right email");
+                    // alert("Please input a right email");
+                    document.getElementById("error").innerHTML =
+                        "Please input a right email";
                     return false;
                 } else if (quantity <= 0) {
-                    alert("Burger's Quantity must be at least 1");
+                    // alert("Burger's Quantity must be at least 1");
+                    document.getElementById("error").innerHTML =
+                        "Burger's Quantity must be at least 1";
                     return false;
                 } else if (address.length > 20 || address == "") {
-                    alert("Address must be filled and length must be under 20");
+                    // alert("Address must be filled and length must be under 20");
+                    document.getElementById("error").innerHTML =
+                        "Address must be filled and length must be under 20";
                     return false;
                 } else if (!agree.checked) {
-                    alert("You have to agree to terms and conditions");
+                    // alert("You have to agree to terms and conditions");
+                    document.getElementById("error").innerHTML =
+                        "You have to agree to terms and conditions";
                     return false;
                 }
             }
