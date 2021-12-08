@@ -1,26 +1,21 @@
-let width = $('.image-slide').width()
+let slide = $(".image-slides");
+let width = $(".image-slide").width();
+let left = $(".toLeft");
+let right = $(".toRight");
 
-$(".image-slides").css("margin-left", -width)
-$(".image-slides:last-child").prependTo(".image-slides")
+slide.css("margin-left", -width);
+$(".image-slides:last-child").prependTo(slide);
 
-$(".toLeft").click(() => {
-    $('.image-slides').animate(
-        {"left": width},
-        2000,
-        () =>{
-            $(".image-slide:last-child").prependTo(".image-slides")
-            $('.image-slides').css("left", "")
-        }
-    )
-})
+left.click(() => {
+    slide.animate({ left: width }, 2000, () => {
+        $(".image-slide:last-child").prependTo(slide);
+        slide.css("left", 0);
+    });
+});
 
-$(".toRight").click(() => {
-    $('.image-slides').animate(
-        {"left": -width},
-        2000,
-        () =>{
-            $(".image-slide:first-child").appendTo(".image-slides")
-            $('.image-slides').css("left", "")
-        }
-    )
-})
+right.click(() => {
+    slide.animate({ left: -width }, 2000, () => {
+        $(".image-slide:first-child").appendTo(slide);
+        slide.css("left", 0);
+    });
+});
