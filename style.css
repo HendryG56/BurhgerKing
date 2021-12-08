@@ -49,6 +49,39 @@ body {
     box-sizing: border-box;
 }
 
+.sliderContainer{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toLeft, .toRight{
+    position: relative;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+.image-slider{
+    max-width: 560px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.image-slides{
+    display: flex;
+    position: relative;
+}
+
+.image-slide{
+    max-width: 560px;
+    width: 100%;
+    height: auto;
+}
+
+
 .event-section {
     float: left;
     width: 50%;
