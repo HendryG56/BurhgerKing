@@ -228,6 +228,12 @@ body {
     margin-right: auto;
 }
 
+.bouncing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 video {
     max-width: 900px;
     height: auto;
