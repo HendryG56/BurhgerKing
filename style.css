@@ -472,7 +472,7 @@ select {
 
     .row::after {
         content: "";
-        display: table;
+        display: flex;
         clear: both;
     }
 
@@ -524,6 +524,21 @@ select {
     video {
         max-width: 650px;
         height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    /* csburger page */
+    .newburger-body {
+        width: 600px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        text-align: justify;
+        color: black;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -635,7 +650,7 @@ select {
 
     .row::after {
         content: "";
-        display: table;
+        display: flex;
         clear: both;
     }
 
