@@ -88,74 +88,6 @@
                 </button>
             </form>
         </div>
-        <!-- <div class="content">
-
-        <section class="menu-title-bg">
-            <p class="menu-title">ORDER</p>
-        </section>
-
-        <section>
-            <div class="order-form">
-                <form>
-                    <div>
-                        <label class="order-data" for="fname">Full Name: </label>
-                        <br>
-                        <input class="order-box" type="text" name="fname" id="fname">
-                    </div>
-
-                    <div>
-                        <label class="order-data" for="email">Email: </label>
-                        <br>
-                        <input class="order-box" type="text" name="email" id="email">
-                    </div>
-
-                    <div>
-                        <label class="order-data" for="burgertype">Burger Type: </label>
-                        <br>
-                        <select class="order-box" name="burgertype" id="burgertype">
-                            <option value="kingburger">King Burger</option>
-                            <option value="queenburger">Queen Burger</option>
-                            <option value="pawnburger">Pawn Burger</option>
-                            <option value="bishopburger">Bishop Burger</option>
-                            <option value="knightburger">Knight Burger</option>
-                            <option value="rookurger">Rook Burger</option>
-                            <option value="doublepawnburger">Double Pawn Burger</option>
-                            <option value="l-moveburger">L-Move Burger</option>
-                            <option value="checkmateburger">Check Mate Burger</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="order-data" for="burgerquantity">Burger Quantity: </label>
-                        <br>
-                        <input class="order-box" type="number" name="burgerquantity" id="burgerquantity" min="0">
-                    </div>
-
-                    <div>
-                        <label class="order-data" for="address">Address: </label>
-                        <br>
-                        <input class="order-box" type="text" name="address" id="address">
-                    </div>
-
-                    <br>
-
-                    <div>
-                        <input class="order-box" type="checkbox" name="termsandconditions" id="termsandconditions">
-                        <label class="order-data-agreement" for="termsandconditions">Agreement with terms and conditions
-                        </label>
-                    </div>
-
-                    <br>
-
-                    <div>
-                        <button class="button-order" type="submit" onclick="return Validate()">SUBMIT</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </div> -->
-
-        <!-- <br /> -->
 
         <footer>
             <div class="footer-bg">
@@ -216,38 +148,30 @@
                 var agree = document.getElementById("termsandconditions");
 
                 if (fullname == "") {
-                    // alert("Name must be filled out");
-                    // $('.error').text("Name must be filled out")
                     document.getElementById("error").innerHTML =
                         "Name must be filled out";
                     return false;
                 } else if (fullname.length < 5 || fullname.length > 15) {
-                    // alert("Name must be between 5 to 15 characters");
                     document.getElementById("error").innerHTML =
                         "Name must be between 5 to 15 characters";
                     return false;
                 } else if (!ceknumeric() || !cekalphabet()) {
-                    // alert("Name must be alphanumeric");
                     document.getElementById("error").innerHTML =
                         "Name must be alphanumeric";
                     return false;
                 } else if (!email.includes("@")) {
-                    // alert("Please input a right email");
                     document.getElementById("error").innerHTML =
                         "Please input a right email";
                     return false;
                 } else if (quantity <= 0) {
-                    // alert("Burger's Quantity must be at least 1");
                     document.getElementById("error").innerHTML =
                         "Burger's Quantity must be at least 1";
                     return false;
                 } else if (address.length > 20 || address == "") {
-                    // alert("Address must be filled and length must be under 20");
                     document.getElementById("error").innerHTML =
                         "Address must be filled and length must be under 20";
                     return false;
                 } else if (!agree.checked) {
-                    // alert("You have to agree to terms and conditions");
                     document.getElementById("error").innerHTML =
                         "You have to agree to terms and conditions";
                     return false;

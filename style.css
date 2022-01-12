@@ -4,7 +4,7 @@ body {
     margin: 0;
     height: 100%;
 }
-/* test */
+
 body {
     display: flex;
     flex-direction: column;
@@ -82,10 +82,6 @@ body {
     width: 100%;
     height: auto;
 }
-
-/* img{
-    width: 100%;
-} */
 
 .event-section {
     float: left;
@@ -378,74 +374,6 @@ select {
     margin: 0;
     padding-top: 10px;
 }
-
-/* order page
-.order-form {
-    width: 500px;
-    margin-top: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.order-data {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: 700;
-    font-size: 20pt;
-    color: black;
-}
-
-.order-box {
-    border-radius: 50px;
-    border-color: #efd700;
-    padding: 7px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: 700;
-    font-size: 15pt;
-    color: black;
-}
-
-.order-box:focus {
-    outline-color: #efd700;
-}
-
-.order-data-agreement {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: 600;
-    font-size: 20pt;
-    color: black;
-}
-
-.button-order {
-    text-decoration: none;
-    border: none;
-    text-align: center;
-    color: black;
-    width: 150px;
-    padding: 15px 15px;
-    border-radius: 50px;
-    background-color: #efd700;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: 900;
-}
-
-.button-order:hover {
-    text-decoration: none;
-    border: none;
-    text-align: center;
-    color: white;
-    width: 150px;
-    padding: 15px 15px;
-    border-radius: 50px;
-    background-color: black;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: 900;
-} */
 
 /* tablet */
 @media only screen and (max-width: 1024px) {
